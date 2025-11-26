@@ -66,7 +66,7 @@ document.addEventListener("DOMContentLoaded", () => {
       if (!u || !p) return showPopup("error", "Lengkapi semua kolom!");
       // store as a simple key (note: not secure, for demo only)
       localStorage.setItem("user_" + u, p);
-      showPopup("error", "Akun berhasil dibuat!");
+      showPopup("Berhasil", "Akun berhasil dibuat!");
       showLogin();
     };
 
@@ -116,10 +116,13 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // ----- DATA PRODUK -----
     const products = [
-      { id: 1, name: "Laptop Gaming", category: "laptop", img: "https://via.placeholder.com/300x200", price: 15000000 },
-      { id: 2, name: "Keyboard Mechanical", category: "aksesoris", img: "https://via.placeholder.com/300x200", price: 350000 },
-      { id: 3, name: "Mouse Wireless", category: "aksesoris", img: "https://via.placeholder.com/300x200", price: 250000 },
-      { id: 4, name: "Laptop Office", category: "laptop", img: "https://via.placeholder.com/300x200", price: 9000000 }
+      { id: 1, name: "Laptop Lenovp", category: "elektronik", img: "lenovo.png", price: 10000000 },
+      { id: 2, name: "Keyboard Mechanical", category: "aksesoris", img: "keyboard.png", price: 350000 },
+      { id: 3, name: "Mouse Wireless", category: "aksesoris", img: "mouse.png", price: 250000 },
+      { id: 4, name: "Laptop ROG", category: "elektronik", img: "roglaptop.png", price: 20000000 },
+      { id: 5, name: "Handphone ROG", category: "elektronik", img: "rogp.png", price: 9000000 },
+      { id: 6, name: "Baju anak", category: "fashion", img: "bajuanak1.png", price: 150000 },
+      { id: 6, name: "Hodie", category: "fashion", img: "hodie.png", price: 150000 }
     ];
 
     let cart = [];
@@ -220,7 +223,7 @@ document.addEventListener("DOMContentLoaded", () => {
     // ----- KERANJANG -----
     window.addToCart = function(id) {
       cart.push(id);
-      showPopup("error", "Produk ditambahkan ke keranjang!");
+      showPopup("berhasil", "Produk ditambahkan ke keranjang!");
     };
 
     window.showCart = function() {
