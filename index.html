@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Marketplace Komputer</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div id="loginScreen" class="login-container">
+    <h2>Login</h2>
+    <input type="text" id="loginUser" placeholder="Username">
+    <input type="password" id="loginPass" placeholder="Password">
+    <button onclick="login()">Masuk</button>
+    <p>Belum punya akun? <a href="#" onclick="showRegister()">Buat Akun</a></p>
+  </div>
+
+  <div id="registerScreen" class="login-container hidden">
+    <h2>Register</h2>
+    <input type="text" id="regUser" placeholder="Username">
+    <input type="password" id="regPass" placeholder="Password">
+    <button onclick="register()">Daftar</button>
+    <p>Sudah punya akun? <a href="#" onclick="showLogin()">Login</a></p>
+  </div>
+
+  <header id="mainHeader" class="hidden">
+    <h1>Marketplace Komputer</h1>
+    <nav>
+      <button onclick="showProducts()">Produk</button>
+      <button onclick="showCart()">Keranjang</button>
+      <button onclick="logout()">Logout</button>
+    </nav>
+  </header>
+
+  <div id="categoryBar" class="hidden categories">
+    <button onclick="filterCategory('all')">Semua</button>
+    <button onclick="filterCategory('laptop')">Laptop</button>
+    <button onclick="filterCategory('aksesoris')">Aksesoris</button>
+  </div>
+
+  <main id="productPage" class="hidden"></main>
+  <main id="productDetail" class="hidden"></main>
+  <main id="cartPage" class="hidden"></main>
+
+  <script src="script.js"></script>
+</body>
+</html>
